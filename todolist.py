@@ -7,7 +7,7 @@ def view_tasks():
     if not tasks:
         print("No tasks in the list.")
     for idx, task in enumerate(tasks, 1):
-        status = "✔️" if task["completed"] else "❌"
+        status = "completed" if task["completed"] else "pending"
         print(f"{idx}. {task['task']} [{status}]")
 
 def mark_completed(index):
